@@ -1,5 +1,7 @@
 # Ganaterm - 轻量级终端AI助手
 
+[English](README.en.md) | 简体中文
+
 Ganaterm是一个面向终端的轻量级AI助手程序，能够在无聊时与llm聊天、执行命令、生成并写入文件。
 
 ## 主要特性
