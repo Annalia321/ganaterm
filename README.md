@@ -15,28 +15,28 @@ Ganaterm是一个面向终端的轻量级AI助手程序，能够在无聊时与l
 ## 安装
 
 1. 克隆仓库
-\`\`\`bash
+```bash
 git clone https://github.com/Annalia321/ganaterm.git
 cd ganaterm
-\`\`\`
+```
 
-2. 安装依赖
-\`\`\`bash
+3. 安装依赖
+```bash
 pip install -r requirements.txt
-\`\`\`
+```
 
-3. 配置环境
-\`\`\`bash
+4. 配置环境
+```bash
 mkdir -p ~/.config/ganaterm
 cp .env.example ~/.config/ganaterm/.env
 # 编辑.env文件，添加你的API密钥
-\`\`\`
+```
 
 4. 设置别名
-\`\`\`bash
+```bash
 cp aliases.sh ~/.config/ganaterm/
 echo "source ~/.config/ganaterm/aliases.sh" >> ~/.bashrc  # 或 ~/.zshrc
-\`\`\`
+```
 
 ## 使用方法
 
@@ -49,14 +49,6 @@ echo "source ~/.config/ganaterm/aliases.sh" >> ~/.bashrc  # 或 ~/.zshrc
 例如：
 ```bash
 g 如何在Linux中查找大文件?
-```
-
-### 交互式使用
-
-如果不提供问题参数，将进入交互式模式：
-
-```bash
-g
 ```
 
 ### 命令执行
