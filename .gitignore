@@ -1,0 +1,32 @@
+# 隐私文件
+.env
+history.jsonl
+
+# Python
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+
+# 编辑器文件
+.vscode/
+.idea/
+*.swp
+*.swo
