@@ -1,4 +1,4 @@
-# Ganaterm - 轻量级终端AI助手
+# Ganaterm - 轻量终端AI助手
 
 [English](README.en.md) | 简体中文
 
