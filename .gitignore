@@ -74,6 +74,11 @@ tmp/
 
 # 用户数据目录
 ~/.config/termgpt/
+~/.config/ganaterm/
+
+# RAG配置文件 - 包含敏感信息
+rag_config.json
+!rag_config.example.json
 
 # 其他
 .DS_Store

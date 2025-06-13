@@ -1,0 +1,95 @@
+{
+  "trigger_rules": [
+    {
+      "keywords": [
+        "错误",
+        "error",
+        "bug",
+        "问题",
+        "失败",
+        "异常"
+      ],
+      "pattern": "(?i)(错误|error|bug|问题|失败|异常|exception)",
+      "memory_types": [
+        "mid",
+        "long"
+      ],
+      "importance_threshold": 0.3,
+      "cooldown_seconds": 60,
+      "max_results": 3,
+      "category": "debug"
+    },
+    {
+      "keywords": [
+        "学习",
+        "教程",
+        "如何",
+        "怎么",
+        "方法"
+      ],
+      "pattern": "(?i)(学习|教程|如何|怎么|方法|how to|tutorial|learn)",
+      "memory_types": [
+        "mid",
+        "long"
+      ],
+      "importance_threshold": 0.4,
+      "cooldown_seconds": 120,
+      "max_results": 5,
+      "category": "learning"
+    },
+    {
+      "keywords": [
+        "代码",
+        "编程",
+        "函数",
+        "api",
+        "python",
+        "javascript"
+      ],
+      "pattern": "(?i)(代码|编程|函数|api|python|javascript|code|programming)",
+      "memory_types": [
+        "mid",
+        "long"
+      ],
+      "importance_threshold": 0.5,
+      "cooldown_seconds": 90,
+      "max_results": 4,
+      "category": "coding"
+    },
+    {
+      "keywords": [
+        "配置",
+        "设置",
+        "安装",
+        "部署",
+        "环境"
+      ],
+      "pattern": "(?i)(配置|设置|安装|部署|环境|config|setup|install|deploy)",
+      "memory_types": [
+        "mid",
+        "long"
+      ],
+      "importance_threshold": 0.6,
+      "cooldown_seconds": 180,
+      "max_results": 3,
+      "category": "config"
+    },
+    {
+      "keywords": [
+        "项目",
+        "文件",
+        "目录",
+        "路径"
+      ],
+      "pattern": "(?i)(项目|文件|目录|路径|project|file|directory|path)",
+      "memory_types": [
+        "short",
+        "mid"
+      ],
+      "importance_threshold": 0.3,
+      "cooldown_seconds": 30,
+      "max_results": 2,
+      "category": "project"
+    }
+  ]
+}
