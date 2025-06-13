@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../gpt_terminal_agent"
+		},
+		{
+			"path": "../gana_terminal_agent"
+		},
+		{
+			"path": "../gpt_terminal_agent_organized"
+		},
+		{
+			"path": "../termgpt"
+		},
+		{
+			"path": "."
+		}
+	]
+}

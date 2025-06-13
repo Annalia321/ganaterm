@@ -1,14 +1,9 @@
-# 隐私文件
-.env
-history.jsonl
-
 # Python
 __pycache__/
 *.py[cod]
-*.class
+*$py.class
 *.so
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -20,13 +15,66 @@ lib64/
 parts/
 sdist/
 var/
+wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-venv/
 
-# 编辑器文件
-.vscode/
+# 虚拟环境
+venv/
+ENV/
+env/
+.env
+.env.local
+
+# IDE
 .idea/
+.vscode/
 *.swp
 *.swo
+.DS_Store
+
+# 日志文件
+*.log
+logs/
+smart_rag.log
+
+# 缓存
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 配置文件 - 敏感信息
+config.json
+*.env
+!.env.example
+
+# 记忆和历史文件 - 用户隐私数据
+memory/
+*.memory
+history.jsonl
+*.jsonl
+
+# RAG监控相关文件
+rag_queue.json
+rag_monitor.pid
+smart_rag.log
+
+# 向量数据库文件
+*.npz
+vector_db.npz
+memory_index.json
+
+# 临时文件
+*.tmp
+*.temp
+temp/
+tmp/
+
+# 用户数据目录
+~/.config/termgpt/
+
+# 其他
+.DS_Store
+Thumbs.db

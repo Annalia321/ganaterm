@@ -2,6 +2,24 @@
 
 Ganaterm is a lightweight AI assistant for the terminal that allows you to chat with LLMs, execute commands, and generate and write files when you're bored.
 
+## Quick Installation
+
+Ganaterm provides a simple installation script to quickly set up everything:
+
+```bash
+# Give execution permission to the install script
+chmod +x install.sh
+
+# Run the installation script
+./install.sh
+
+# Activate the configuration (follow the script's prompt)
+source ~/.bashrc  # or ~/.zshrc
+```
+
+> **Important Note**: After installation, you need to edit the `~/.config/ganaterm/.env` file to add your API keys!
+> Ganaterm will not work properly without valid API keys.
+
 ## Key Features
 
 - **Model API Support**: Currently supports OpenAI, DeepSeek, and xAI large language models
@@ -12,7 +30,21 @@ Ganaterm is a lightweight AI assistant for the terminal that allows you to chat 
 
 ## Installation Guide
 
-## Installation
+### Automatic Installation (Recommended)
+
+Use the provided installation script to automatically complete all setup:
+
+```bash
+chmod +x install.sh
+./install.sh
+source ~/.bashrc  # or ~/.zshrc
+```
+
+After completion, edit the `~/.config/ganaterm/.env` file to add your API keys.
+
+### Manual Installation
+
+If you prefer to install manually, follow these steps:
 
 1. Clone the repository
 ```bash
@@ -29,7 +61,7 @@ pip install -r requirements.txt
 ```bash
 mkdir -p ~/.config/ganaterm
 cp .env.example ~/.config/ganaterm/.env
-# Edit .env file to add your API keys
+# Edit the .env file to add your API keys
 ```
 
 4. Set up aliases

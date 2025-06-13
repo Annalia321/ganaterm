@@ -1,98 +1,95 @@
-# Ganaterm - 轻量级终端AI助手
+# Ganaterm - 智能终端AI助手
 
-Ganaterm是一个面向终端的轻量级AI助手程序，能够在无聊时与llm聊天、执行命令、生成并写入文件。
+Ganaterm是一个功能强大的终端AI助手，支持多种大语言模型，提供智能对话、代码生成、命令执行等功能。
 
-## 主要特性
+## 特性
 
-- **模型api支持**：目前支持OpenAI、DeepSeek、xAI大语言模型
-- **命令执行**：能够检测LLM响应中包含的命令并(y/n)执行（有安全检查）
-- **轻量启动**：快速一键启动
-- **打字效果**：支持打字机效果显示模型回复，提升交互体验(可选)
-- **带有历史记忆**：支持历史对话记忆～
-
-## 安装指南
+- 多模型支持：OpenAI、DeepSeek、XAI等
+- 智能记忆：短期、中期、长期记忆管理
+- 上下文理解：智能分析和增强对话上下文
+- 代码生成：支持多种编程语言
+- 命令执行：安全的命令执行环境
+- 美观界面：支持Markdown渲染和语法高亮
 
 ## 安装
 
-1. 克隆仓库
-\`\`\`bash
-git clone https://github.com/Annalia321/ganaterm.git
+1. 克隆仓库：
+```bash
+git clone https://github.com/yourusername/ganaterm.git
 cd ganaterm
-\`\`\`
+```
 
-2. 安装依赖
-\`\`\`bash
-pip install -r requirements.txt
-\`\`\`
+2. 运行安装脚本：
+```bash
+chmod +x run.sh
+./run.sh
+```
 
-3. 配置环境
-\`\`\`bash
+## 配置
+
+1. 创建配置文件：
+```bash
 mkdir -p ~/.config/ganaterm
-cp .env.example ~/.config/ganaterm/.env
-# 编辑.env文件，添加你的API密钥
-\`\`\`
+touch ~/.config/ganaterm/.env
+```
 
-4. 设置别名
-\`\`\`bash
-cp aliases.sh ~/.config/ganaterm/
-echo "source ~/.config/ganaterm/aliases.sh" >> ~/.bashrc  # 或 ~/.zshrc
-\`\`\`
+2. 设置API密钥：
+```bash
+# OpenAI API密钥
+OPENAI_API_KEY=your_openai_api_key
+
+# DeepSeek API密钥
+DEEPSEEK_API_KEY=your_deepseek_api_key
+
+# XAI API密钥
+XAI_API_KEY=your_xai_api_key
+```
 
 ## 使用方法
 
-### 快速命令
-
-- `g [问题]` - 使用OpenAI模型
-- `d [问题]` - 使用DeepSeek模型 
-- `x [问题]` - 使用xAI(Grok)模型
-
-例如：
+1. 启动程序：
 ```bash
-g 如何在Linux中查找大文件?
+./run.sh
 ```
 
-### 交互式使用
+2. 基本命令：
+- `help` - 显示帮助信息
+- `model list` - 显示可用模型
+- `model switch <model>` - 切换模型
+- `memory list` - 显示记忆列表
+- `memory search <query>` - 搜索记忆
+- `config show` - 显示配置
+- `exit` - 退出程序
 
-如果不提供问题参数，将进入交互式模式：
+3. 聊天模式：
+- 直接输入问题开始对话
+- 支持多行输入（Shift+Enter换行）
+- 支持代码块和命令执行
 
-```bash
-g
+## 开发
+
+1. 项目结构：
+```
+ganaterm/
+├── src/
+│   ├── core/           # 核心功能
+│   ├── memory/         # 记忆管理
+│   ├── utils/          # 工具函数
+│   └── context/        # 上下文处理
+├── ganaterm.py         # 主程序
+├── run.sh             # 启动脚本
+└── requirements.txt    # 依赖列表
 ```
 
-### 命令执行
-
-当AI建议命令时，会提示是否执行：
-
-```
-！是否执行:`find . -type f -size +100M` ?(y/n)
-```
-
-### 代码生成
-
-当AI生成代码块时，会提示是否保存到文件：
-
-```
-！检测到python代码块，是否写入文件main.py?(y/n/e/rnm) y:写入 n:丢弃 e:显示内容 rnm:
-！检测到python代码块，是否写入文件main.py?(y/n/e) y:写入 n:丢弃 e:显示内容
-```
-
-## 环境变量配置
-
-`.env`文件支持以下配置：
-
-- `OPENAI_API_KEY` - OpenAI API密钥
-- `DEEPSEEK_API_KEY` - DeepSeek API密钥
-- `XAI_API_KEY` - xAI API密钥
-- `HTTP_PROXY/HTTPS_PROXY` - 代理设置
-- `USE_TYPEWRITER` - 是否启用打字效果
-- `TYPING_SPEED_WPM` - 打字速度设置
-
-
-## 许可证
-
-MIT
-EOL
+2. 添加新功能：
+- 在相应目录创建新模块
+- 在`ganaterm.py`中导入和初始化
+- 更新`requirements.txt`添加依赖
 
 ## 贡献
 
-欢迎提交Pull Request或Issue来改进Ganaterm！
+欢迎提交Issue和Pull Request！
+
+## 许可证
+
+MIT License
